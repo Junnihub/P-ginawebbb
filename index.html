@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa de Cambios Costeros – Puerto Colombia</title>
+  <meta name="description" content="Mapa interactivo de la evolución de la línea costera de Puerto Colombia, Atlántico, Colombia. Visualiza el retroceso costero a través del tiempo." />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="" />
+
+  <!-- App CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       Loading overlay
+       ==================================================== -->
+  <div id="loading-overlay">
+    <div class="loader-ring"></div>
+    <p>Cargando mapa costero…</p>
+  </div>
+
+  <!-- ====================================================
+       Header
+       ==================================================== -->
+  <header id="app-header">
+    <a class="logo" href="#" aria-label="Inicio">
+      <div class="logo-icon">🌊</div>
+    </a>
+    <h1>
+      Mapa Costero – Puerto Colombia
+      <span>Evolución de la línea de costa · Atlántico, Colombia</span>
+    </h1>
+    <div class="header-spacer"></div>
+    <div class="header-badge">📍 5 puntos de observación</div>
+  </header>
+
+  <!-- ====================================================
+       Main layout
+       ==================================================== -->
+  <div id="layout">
+
+    <!-- Map -->
+    <div id="map-container">
+      <div id="map"></div>
+
+      <!-- Floating tip -->
+      <div id="map-tip">🖱️ Haz clic en un marcador para ver los videos de cambio costero</div>
+
+      <!-- Legend -->
+      <div id="map-legend">
+        <h4>Nivel de erosión</h4>
+        <div class="legend-item">
+          <div class="legend-dot critical"></div>
+          <span>Crítico</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot warning"></div>
+          <span>Alto</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot moderate"></div>
+          <span>Moderado</span>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot stable"></div>
+          <span>Estable</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================
+         Side panel (slides in on marker click)
+         ================================================ -->
+    <aside id="side-panel" role="complementary" aria-label="Información del punto costero">
+
+      <!-- Panel header -->
+      <div id="panel-header">
+        <div id="panel-icon" aria-hidden="true">🌊</div>
+        <div id="panel-header-info">
+          <div id="panel-title">Selecciona un punto</div>
+          <div id="panel-subtitle">Haz clic en un marcador del mapa</div>
+        </div>
+        <button id="panel-close" aria-label="Cerrar panel" title="Cerrar">✕</button>
+      </div>
+
+      <!-- Scrollable body -->
+      <div id="panel-body">
+
+        <!-- Location description -->
+        <p id="panel-description"></p>
+
+        <!-- Video player / placeholder -->
+        <div id="video-wrapper">
+          <video
+            id="video-player"
+            controls
+            playsinline
+            style="display:none;"
+            aria-label="Video de cambio costero"
+          ></video>
+
+          <div id="video-placeholder">
+            <div class="placeholder-icon">🎬</div>
+            <p>Video no disponible.<br>Agrega la URL del video en <code>data/videos.json</code>.</p>
+            <span class="placeholder-hint">Campo: "url" en el objeto del año seleccionado</span>
+          </div>
+        </div>
+
+        <!-- Year selector -->
+        <div id="year-selector">
+          <h4>Selecciona el período</h4>
+          <div id="year-tabs" role="tablist"></div>
+        </div>
+
+        <!-- Video description for selected year -->
+        <div id="video-info">
+          <div id="video-year-label">Año</div>
+          <p id="video-description"></p>
+        </div>
+
+        <!-- Erosion indicator -->
+        <div id="erosion-indicator">
+          <h4>Índice de retroceso costero acumulado</h4>
+          <div class="erosion-bar-container">
+            <div class="erosion-bar-fill" id="erosion-bar-fill" style="width: 10%;"></div>
+          </div>
+          <div class="erosion-bar-labels">
+            <span>Estable (1985)</span>
+            <span>Crítico (2023)</span>
+          </div>
+        </div>
+
+      </div><!-- /panel-body -->
+    </aside>
+
+  </div><!-- /layout -->
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WLs="
+          crossorigin=""></script>
+
+  <!-- App JS -->
+  <script src="js/map.js"></script>
+</body>
+</html>

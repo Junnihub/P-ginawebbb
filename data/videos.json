@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "location": "Muelle de Puerto Colombia",
+    "coordinates": [10.9928, -74.9535],
+    "description": "El emblemático Muelle de Puerto Colombia, uno de los más largos del mundo en su época. Esta zona ha experimentado una marcada erosión costera durante las últimas décadas.",
+    "icon": "anchor",
+    "videos": [
+      {
+        "year": 1985,
+        "url": "",
+        "thumbnail": "",
+        "description": "La línea costera se encontraba aproximadamente 80 metros más hacia el mar. El muelle lucía en buenas condiciones estructurales."
+      },
+      {
+        "year": 1995,
+        "url": "",
+        "thumbnail": "",
+        "description": "Se registra el primer retroceso significativo de la línea costera. La erosión comienza a afectar la base del muelle."
+      },
+      {
+        "year": 2005,
+        "url": "",
+        "thumbnail": "",
+        "description": "La costa ha retrocedido cerca de 40 metros respecto a 1985. Daños estructurales visibles en el muelle histórico."
+      },
+      {
+        "year": 2015,
+        "url": "",
+        "thumbnail": "",
+        "description": "El retroceso costero continúa. Se implementan obras de protección costera como enrocados y espolones."
+      },
+      {
+        "year": 2023,
+        "url": "",
+        "thumbnail": "",
+        "description": "Estado actual: la línea costera ha perdido más de 60 metros en 38 años. El muelle está deteriorado y parcialmente inaccesible."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "location": "Playa Central – Balneario",
+    "coordinates": [10.9943, -74.9510],
+    "description": "Zona de playa principal del municipio, históricamente utilizada como balneario. Ha sufrido pérdidas considerables de arena y reducción del ancho de playa.",
+    "icon": "umbrella-beach",
+    "videos": [
+      {
+        "year": 1985,
+        "url": "",
+        "thumbnail": "",
+        "description": "Playa amplia con ancho de hasta 45 metros. Baja presión urbanística en la primera línea de mar."
+      },
+      {
+        "year": 1995,
+        "url": "",
+        "thumbnail": "",
+        "description": "El ancho de playa se reduce a 30 metros. Se intensifica la construcción en el frente costero."
+      },
+      {
+        "year": 2005,
+        "url": "",
+        "thumbnail": "",
+        "description": "Ancho de playa de apenas 15 metros en puntos críticos. Las marejadas alcanzan con frecuencia las construcciones aledañas."
+      },
+      {
+        "year": 2015,
+        "url": "",
+        "thumbnail": "",
+        "description": "Intervenciones de relleno artificial temporales. La dinámica litoral sigue dominando la pérdida de sedimentos."
+      },
+      {
+        "year": 2023,
+        "url": "",
+        "thumbnail": "",
+        "description": "Playa muy reducida. En algunos sectores ha desaparecido completamente durante la temporada de marejadas."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "location": "Sector Sabanilla – Boca de la Barra",
+    "coordinates": [10.9960, -74.9720],
+    "description": "Zona de transición entre la desembocadura del Canal del Dique y la playa de Sabanilla. Área dinámica con acreción en algunos sectores y erosión en otros.",
+    "icon": "water",
+    "videos": [
+      {
+        "year": 1985,
+        "url": "",
+        "thumbnail": "",
+        "description": "Alta sedimentación proveniente del Canal del Dique crea barras arenosas estacionales. Costa relativamente estable."
+      },
+      {
+        "year": 1995,
+        "url": "",
+        "thumbnail": "",
+        "description": "Reducción del aporte sedimentario por dragados en el Canal del Dique. La barra arenosa comienza a retroceder."
+      },
+      {
+        "year": 2005,
+        "url": "",
+        "thumbnail": "",
+        "description": "El equilibrio sedimentario se rompe. La erosión supera la acreción en este sector por primera vez."
+      },
+      {
+        "year": 2015,
+        "url": "",
+        "thumbnail": "",
+        "description": "Pérdida notoria de la barra arenosa. Se registran inundaciones puntuales en zonas antes protegidas."
+      },
+      {
+        "year": 2023,
+        "url": "",
+        "thumbnail": "",
+        "description": "Sector con alta vulnerabilidad costera. Las comunidades locales reportan avance del mar sobre zonas habitadas."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "location": "Punta Roca – Zona Rocosa Este",
+    "coordinates": [10.9905, -74.9380],
+    "description": "Frente costero con sustrato rocoso que ha actuado como punto de referencia para medir el retroceso de sedimentos blandos adyacentes. Zona de interés geológico.",
+    "icon": "mountain",
+    "videos": [
+      {
+        "year": 1985,
+        "url": "",
+        "thumbnail": "",
+        "description": "Las playas adyacentes a la zona rocosa presentan buenos volúmenes de arena. La roca actúa como elemento estabilizador."
+      },
+      {
+        "year": 1995,
+        "url": "",
+        "thumbnail": "",
+        "description": "La arena al costado oeste de la zona rocosa empieza a perderse. La influencia del jetty norte de Bocas de Ceniza se hace evidente."
+      },
+      {
+        "year": 2005,
+        "url": "",
+        "thumbnail": "",
+        "description": "La playa al este de la zona rocosa experimenta un leve engorde por redistribución sedimentaria local."
+      },
+      {
+        "year": 2015,
+        "url": "",
+        "thumbnail": "",
+        "description": "La zona rocosa queda expuesta en mayor medida. El nivel del mar en período de tormenta alcanza la base de las formaciones."
+      },
+      {
+        "year": 2023,
+        "url": "",
+        "thumbnail": "",
+        "description": "Estado actual con erosión diferencial clara entre sectores rocosos (estables) y sectores arenosos (en retroceso)."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "location": "Playa del Puerto – Zona Occidental",
+    "coordinates": [10.9915, -74.9640],
+    "description": "Frente costero occidental del municipio, expuesto a la dinámica de corrientes litorales que transportan sedimentos hacia el norte. Una de las zonas más afectadas por la erosión.",
+    "icon": "wave-square",
+    "videos": [
+      {
+        "year": 1985,
+        "url": "",
+        "thumbnail": "",
+        "description": "Costa con vegetación de manglar bien conservada al interior. Playa de mediano ancho funcionando como barrera natural."
+      },
+      {
+        "year": 1995,
+        "url": "",
+        "thumbnail": "",
+        "description": "Se inicia la tala del manglar para construcción de infraestructura. La playa pierde su primer tramo de berma."
+      },
+      {
+        "year": 2005,
+        "url": "",
+        "thumbnail": "",
+        "description": "Sin la protección del manglar, la erosión se acelera. La primera línea de casas queda expuesta al oleaje de tormenta."
+      },
+      {
+        "year": 2015,
+        "url": "",
+        "thumbnail": "",
+        "description": "Varias estructuras han tenido que ser demolidas por riesgo de colapso. La línea de costa avanza tierra adentro unos 50 metros en 30 años."
+      },
+      {
+        "year": 2023,
+        "url": "",
+        "thumbnail": "",
+        "description": "Zona crítica. Las autoridades locales han declarado el sector como área de alto riesgo no mitigable. Reubicación de familias en proceso."
+      }
+    ]
+  }
+]
