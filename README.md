@@ -1,79 +1,25 @@
-# 🌊 COSTAS_GITT – Peligros Costeros de Puerto Colombia
+# COSTAS HUB: Monitoreo Satelital de la Línea Costera
 
-Extensión académica de [CoastSat](https://github.com/kvos/CoastSat) aplicada a
-**Puerto Colombia, Atlántico, Colombia**.
+**COSTAS HUB** es un sistema académico de monitoreo satelital de la línea costera del municipio de Puerto Colombia (Atlántico, Colombia). El proyecto utiliza imágenes Landsat 8/9 y Sentinel-2 descargadas a través de Google Earth Engine para extraer la posición de la interfaz agua-arena en seis segmentos del litoral, cuantificando su evolución morfológica desde enero de 2023.
 
-Muestra un **mapa interactivo** con zonas de peligro costero identificadas
-mediante análisis de imágenes satelitales (Landsat / Sentinel-2) a través de
-Google Earth Engine.
+## 📊 Visualización de Resultados
+Los resultados se publican en un visor web interactivo donde los polígonos de cada segmento se colorean dinámicamente según su estado actual:
+* 🔴 **Erosión**: $\Delta x < -1$ m
+* 🟢 **Acreción**: $\Delta x > +1$ m
+* ⚪ **Estable**: $-1 \leq \Delta x \leq +1$ m
+* 💠 **Sin datos**: JSON ausente o datos insuficientes
 
----
+## 📂 Estructura del Repositorio
+* `gemini.ipynb`: Notebook de Google Colab. Descarga imágenes, extrae *shorelines*, construye transectos y genera `resultados_web.json`.
+* `app.js`: Lógica del visor web (Leaflet.js), manejo de polígonos, renderizado de métricas y gestión de eventos.
+* `index.html`: Estructura base del visor web.
+* `styles.css`: Diseño visual y leyenda del visor.
+* `resultados_web.json`: Salida procesada con el balance neto y métricas por segmento.
 
-## Características del mapa
+## 🚀 Implementación
 
-| Capa | Descripción |
-|------|-------------|
-| 🔴 Erosión Alta | Retroceso costero > 1 m/año documentado por satélite |
-| 🟠 Erosión Moderada | Retroceso costero 0.3–1 m/año |
-
-
-
-## Estructura del proyecto
-
-```
-COSTAS_GITT/
-├── index.html                   # Mapa interactivo (Leaflet.js, sin dependencias)
-├── generar_mapa.py              # Generador Python con Folium
-├── requirements.txt             # Dependencias Python
-├── data/
-│   └── peligros_costeros.geojson  # Datos GeoJSON de peligros costeros
-└── output/                      # Mapas generados por generar_mapa.py
-```
-
----
-
-## Área de estudio
-
-**Puerto Colombia** (10.9856°N, 74.9731°O) es un municipio del departamento
-del Atlántico, Colombia, ubicado sobre el Mar Caribe.  Su costa es afectada por:
-
-- **Erosión costera** acelerada por oleaje y déficit de sedimentos.
-- **Marejadas ciclónicas** asociadas a depresiones tropicales del Caribe.
-- **Contaminación** por escorrentía urbana y descargas directas al mar.
-
-
----
-
-## Metodología (CoastSat)
-
-Este proyecto se basa en la metodología de
-[CoastSat (Vos et al., 2019)](https://github.com/kvos/CoastSat):
-
-1. Descarga de imágenes Landsat (5/7/8/9) y Sentinel-2 desde Google Earth Engine.
-2. Preprocesamiento y clasificación de píxeles (arena, agua, vegetación, urbanismo).
-3. Extracción de la línea costera con el algoritmo MNDWI/NDWI.
-4. Análisis de series temporales de la posición de la playa (<5años–presente).
-5. Visualización de cambios y zonas de riesgo en mapa interactivo.
-
----
-
-## Referencias
-
-- Vos, K., Splinter, K. D., Harley, M. D., Simmons, J. A., & Turner, I. L. (2019).
-  **CoastSat: A Google Earth Engine-enabled Python toolkit to extract shorelines
-  from publicly available satellite imagery.** *Environmental Modelling & Software*,
-  122, 104528. <https://doi.org/10.1016/j.envsoft.2019.104528>
-
-- Repositorio original: <https://github.com/kvos/CoastSat>
-
----
-
-## Créditos
-
-- **Datos satelitales:** Landsat (USGS/NASA) y Sentinel-2 (ESA/Copernicus)
-  vía Google Earth Engine.
-- **Mapa base:** OpenStreetMap.
-
-
-> Proyecto académico · Universidad Francisco José de Caldas
-
+### 1. Procesamiento (Google Colab)
+1. Abre `gemini.ipynb` en Google Colab.
+2. Inicializa tu proyecto de Google Earth Engine con tu propio ID en la celda correspondiente:
+   ```python
+   ee.Initialize(project='tu-id-de-proyecto')
