@@ -23,3 +23,6 @@ Los resultados se publican en un visor web interactivo donde los polígonos de c
 2. Inicializa tu proyecto de Google Earth Engine con tu propio ID en la celda correspondiente:
    ```python
    ee.Initialize(project='tu-id-de-proyecto')
+
+
+### Carpéta utilizada para el proyecto: https://drive.google.com/drive/folders/1LTcBcnEHvLeX4f_AqwZJ606OGd392ms4?usp=drive_link
